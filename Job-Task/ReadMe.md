@@ -23,7 +23,7 @@
 
 Используем команду -docker-compose up -d, которая позволит запустить кластер в фоновом режиме.
 
-<img src="images/docker-composeUP.jpg" alt="docker-composeUP.jpg" width="400">
+<img src="images/docker-composeUP.png" alt="docker-composeUP.png" width="400">
 
 После того, как загорелась зеленая кнопка DONE. Можно проверить состояние контейнеров через команду -docker ps.
 
