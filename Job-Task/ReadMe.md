@@ -12,7 +12,7 @@
 
 Шаг 1. Создадим Docker-Compose.yml и напишем скрипт для развертывания кластера Cassandra с тремя инстансами.
 
-<img src="images/dockergood.jpg" alt="dockergood.jpg" width="400">
+<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
 
 В нем мы определяем 3 инстанса под названиями "cassandra1", "cassandra2", "cassandra3". Каждому инстансу присваиваем официальный образ cassandra, в параметрах среды "environment" связываем все три узла кластера через CASSANDRA_SEEDS. Добавляем адреса для прослушивания и задаем каждому инстансу свой ipv4-адрес.
 
@@ -23,7 +23,7 @@
 
 Используем команду -docker-compose up -d, которая позволит запустить кластер в фоновом режиме.
 
-<img src="images/dockergood.jpg" alt="dockergood.jpg" width="400">
+<img src="images/docker-composeUP.jpg" alt="docker-composeUP.jpg" width="400">
 
 После того, как загорелась зеленая кнопка DONE. Можно проверить состояние контейнеров через команду -docker ps.
 
@@ -32,7 +32,7 @@ docker exec -it cassandra1 bash
 
 nodetool status
 
-<img src="images/dockergood.jpg" alt="dockergood.jpg" width="400">
+<img src="images/bash.jpg" alt="bash.jpg" width="400">
 
 Шаг 3. Подключимся к нашим инстансам через cqlsh.
 
@@ -40,7 +40,7 @@ nodetool status
 
 cqlsh 192.168.1.200
 
-<img src="images/dockergood.jpg" alt="dockergood.jpg" width="400">
+<img src="images/cqlshFirst.jpg" alt="cqslhFirst.jpg" width="400">
 
 Как мы видим все получилось. Но если эту же команду использовать на второй виртуальной машине, получим ошибку. 
 Траблшутинг в виде проброса портов, настройка firewall не привел к ожидаемым результатам.
@@ -58,25 +58,25 @@ firewall-cmd --reload
 
 Далее был составлен концептуальный план, после которого было, возможно, понятно, в чем ошибка.
 
-<img src="images/dockerimagegood.jpg" alt="dockerimagegood.jpg" width="400">
+<img src="images/PROBLEM.jpeg" alt="PROBLEM.jpeg" width="400">
 
 
 Шаг 4. Настройка виртуальных машин.
 
 Настроим каждую виртуальную машину на сеть NAT + Host-only Ethernet adapter. Это позволит каждой виртуалке выдать IP адреса в подсети 192.168.1.0/24.
 
-<img src="images/dockerimagegood.jpg" alt="dockerimagegood.jpg" width="400">
+<img src="images/VMfix.jpg" alt="VMfix.jpg" width="400">
 
 После захода на каждую виртуальную сеть появятся новые корректные IP-адреса такие как: 192.168.1.6 и 192.168.1.4.
-<img src="images/dockerimagegood.jpg" alt="dockerimagegood.jpg" width="400">
+<img src="images/ip1.jpg" alt="ip1.jpg" width="400">
 
-<img src="images/dockerimagegood.jpg" alt="dockerimagegood.jpg" width="400">
+<img src="images/ip2.jpg" alt="ip2.jpg" width="400">
 
 Можно проверить связь между ними и пропинговать. Пакеты успешно передаются и контакт между виртуалками установлен.
 
-<img src="images/dockerimagegood.jpg" alt="dockerimagegood.jpg" width="400">
+<img src="images/ping.jpg" alt="ping.jpg" width="400">
 
 Но после этого контейнеры перестают пинговаться и даже с первой виртуалки невозможно подсоединиться через cqlsh "No Route to host"... 
 
-<img src="images/dockerimagegood.jpg" alt="dockerimagegood.jpg" width="400">
+<img src="images/NoRouteHost.jpg" alt="NoRouteHost.jpg" width="400">
 
