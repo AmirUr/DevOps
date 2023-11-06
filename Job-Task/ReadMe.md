@@ -32,7 +32,7 @@ docker exec -it cassandra1 bash
 
 nodetool status
 
-<img src="images/bash.jpg" alt="bash.jpg" width="400">
+<img src="images/bash.png" alt="bash.png" width="400">
 
 Шаг 3. Подключимся к нашим инстансам через cqlsh.
 
@@ -40,7 +40,7 @@ nodetool status
 
 cqlsh 192.168.1.200
 
-<img src="images/cqlshFirst.jpg" alt="cqslhFirst.jpg" width="400">
+<img src="images/cqlshFirst.png" alt="cqlshFirst.png" width="400">
 
 Как мы видим все получилось. Но если эту же команду использовать на второй виртуальной машине, получим ошибку. 
 Траблшутинг в виде проброса портов, настройка firewall не привел к ожидаемым результатам.
@@ -58,25 +58,25 @@ firewall-cmd --reload
 
 Далее был составлен концептуальный план, после которого было, возможно, понятно, в чем ошибка.
 
-<img src="images/PROBLEM.jpeg" alt="PROBLEM.jpeg" width="400">
+<img src="images/PROBLEM.png" alt="PROBLEM.png" width="400">
 
 
 Шаг 4. Настройка виртуальных машин.
 
 Настроим каждую виртуальную машину на сеть NAT + Host-only Ethernet adapter. Это позволит каждой виртуалке выдать IP адреса в подсети 192.168.1.0/24.
 
-<img src="images/VMfix.jpg" alt="VMfix.jpg" width="400">
+<img src="images/VMfix.png" alt="VMfix.png" width="400">
 
 После захода на каждую виртуальную сеть появятся новые корректные IP-адреса такие как: 192.168.1.6 и 192.168.1.4.
-<img src="images/ip1.jpg" alt="ip1.jpg" width="400">
+<img src="images/ip1.png" alt="ip1.png" width="400">
 
-<img src="images/ip2.jpg" alt="ip2.jpg" width="400">
+<img src="images/ip2.png" alt="ip2.png" width="400">
 
 Можно проверить связь между ними и пропинговать. Пакеты успешно передаются и контакт между виртуалками установлен.
 
-<img src="images/ping.jpg" alt="ping.jpg" width="400">
+<img src="images/ping.png" alt="ping.png" width="400">
 
 Но после этого контейнеры перестают пинговаться и даже с первой виртуалки невозможно подсоединиться через cqlsh "No Route to host"... 
 
-<img src="images/NoRouteHost.jpg" alt="NoRouteHost.jpg" width="400">
+<img src="images/NoRouteHost.png" alt="NoRouteHost.png" width="400">
 
