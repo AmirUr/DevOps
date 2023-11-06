@@ -58,7 +58,7 @@ firewall-cmd --reload
 
 Далее был составлен концептуальный план, после которого было, возможно, понятно, в чем ошибка.
 
-<img src="images/PROBLEM.png" alt="PROBLEM.png" width="400">
+<img src="images/PROBLEM.jpg" alt="PROBLEM.jpg" width="400">
 
 
 Шаг 4. Настройка виртуальных машин.
