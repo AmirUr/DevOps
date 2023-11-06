@@ -67,6 +67,7 @@
 <img src="images/VMfix.png" alt="VMfix.png" width="400">
 
 После захода на каждую виртуальную сеть появятся новые корректные IP-адреса такие как: 192.168.1.6 и 192.168.1.4. А главное, они находятся в одной подсети с контейнерами.
+
 <img src="images/ip1.png" alt="ip1.png" width="400">
 
 <img src="images/ip2.png" alt="ip2.png" width="400">
