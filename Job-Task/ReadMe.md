@@ -21,16 +21,16 @@
 
 Шаг 2. Запустим docker-compose файл. Развернем кластер. Проверим состояние кластера.
 
-Используем команду -docker-compose up -d, которая позволит запустить кластер в фоновом режиме.
+Используем команду '-docker-compose up -d', которая позволит запустить кластер в фоновом режиме.
 
 <img src="images/docker-composeUP.png" alt="docker-composeUP.png" width="400">
 
-После того, как загорелась зеленая кнопка DONE. Можно проверить состояние контейнеров через команду -docker ps.
+После того, как загорелась зеленая кнопка DONE. Можно проверить состояние контейнеров через команду '-docker ps'.
 
 Либо можно напрямую войти в оболочку любого из контейнеров и проверить их подробное состояние. Используя следующие команды:
-docker exec -it cassandra1 bash
+'docker exec -it cassandra1 bash'
 
-nodetool status
+'nodetool status'
 
 <img src="images/bash.png" alt="bash.png" width="400">
 
@@ -38,7 +38,7 @@ nodetool status
 
 Для начала попробуем подключиться через cqlsh с первой виртуалки, с которой же и запускали контейнеры. Используя следующую команду:
 
-cqlsh 192.168.1.200
+'cqlsh 192.168.1.200'
 
 <img src="images/cqlshFirst.png" alt="cqlshFirst.png" width="400">
 
@@ -46,20 +46,19 @@ cqlsh 192.168.1.200
 Траблшутинг в виде проброса портов, настройка firewall не привел к ожидаемым результатам.
 Использовались команды:
 
-sudo ufw allow 9042/tcp
+'sudo ufw allow 9042/tcp'
 
-firewall-cmd --new-zone=cassandra-cluster --permanent
+'firewall-cmd --new-zone=cassandra-cluster --permanent'
 
-firewall-cmd --zone=cassandra-cluster --add-source=192.168.1.0/24 --permanent
+'firewall-cmd --zone=cassandra-cluster --add-source=192.168.1.0/24 --permanent'
 
-firewall-cmd --zone=cassandra-cluster --add-port=9042/tcp --permanent
+'firewall-cmd --zone=cassandra-cluster --add-port=9042/tcp --permanent'
 
-firewall-cmd --reload
+'firewall-cmd --reload'
 
 Далее был составлен концептуальный план, после которого было, возможно, понятно, в чем ошибка.
 
 <img src="images/PROBLEM.jpg" alt="PROBLEM.jpg" width="400">
-
 
 Шаг 4. Настройка виртуальных машин.
 
