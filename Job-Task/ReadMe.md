@@ -80,3 +80,4 @@
 
 <img src="images/NoRouteHost.png" alt="NoRouteHost.png" width="400">
 
+В теории я вижу решение этой проблемы в использовании Bridged Network`a в настройках Virtual Box, который установит прямое соединение между виртуальной и физической сетью, но, у меня VM не может подключить Bridged Adapter, нужно сносить полностью Virtual Box и ставить новый.
