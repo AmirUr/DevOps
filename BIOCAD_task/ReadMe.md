@@ -47,26 +47,26 @@
 ## Задание 2.
 Создание веб-приложения "Hello World" на Flask.
 
-<img src="images/flaskfirst.png" alt="flaskfirst.png" width="400">
+<img src="image/flaskfirst.png" alt="flaskfirst.png" width="400">
 
 Создание контейнера и публикация на DockerHub.
 
-<img src="images/dockerPush.png" alt="dockerPush.png" width="400">
+<img src="image/dockerPush.png" alt="dockerPush.png" width="400">
 
-<img src="images/dockerHub.png" alt="dockerHub.png" width="400">
+<img src="image/dockerHub.png" alt="dockerHub.png" width="400">
 
 Написание Deployment с 2 ReplicaSet.
 
-<img src="images/deployments.png" alt="deployments.png" width="400">
+<img src="image/deployments.png" alt="deployments.png" width="400">
 
 Написание Service.
 
-<img src="images/service.png" alt="service.png" width="400">
+<img src="image/service.png" alt="service.png" width="400">
 
 Запуск minikube, проброс портов, подключение к контейнерам через веб-браузер.
 
-<img src="images/browserminikube.jpg" alt="browserminikube.jpg" width="400">
+<img src="image/browserminikube.jpg" alt="browserminikube.jpg" width="400">
 
 Схема организации контейнеров и сервисов (draw.io)
 
-<img src="images/drawio.jpg" alt="drawio.jpg" width="400">
+<img src="image/drawio.jpg" alt="drawio.jpg" width="400">
