@@ -65,8 +65,8 @@
 
 Запуск minikube, проброс портов, подключение к контейнерам через веб-браузер.
 
-<img src="image/browserminikube.jpg" alt="browserminikube.jpg" width="400">
+<img src="image/browserminikube.png" alt="browserminikube.png" width="400">
 
 Схема организации контейнеров и сервисов (draw.io)
 
-<img src="image/drawio.jpg" alt="drawio.jpg" width="400">
+<img src="image/drawio.png" alt="drawio.png" width="400">
