@@ -1,5 +1,5 @@
 # Тестовое задание на стажировку в Biocad.
-## Вопросы
+## Задание 1.
 - Чем git pull отличается от git fetch?
   Это две разные команды в системе управления версиями Git. Git Pull это команда которая обновляет локальную копию кода данными из удаленного репозитория и автоматически объединяет с      текущей. Git Fetch более безопасная команда, которая обновляет локальную копию, но не применяет изменения с текущей.
 - Какие модели ветвления git существуют?
@@ -41,7 +41,32 @@
  	LEFT OUTER JOIN (возвращает все записи из 1 таблицы, и те записи во 2 таблице, которые пересекаются с 1)
  	RIGHT OUTER JOIN (возвращает все записи из 2 таблицы, и те записи в 1 таблице, которые пересекаются с 2)
  	FULL OUTER JOIN (возвращает все записи из 1 и 2 таблицы)
-  
 -	Что такое having в SQL запросе? Чем отличается от where?
   Having используется для фильтрации данных. Where фильтрует строки до группировки, а Having фильтрует после группировки. Having в основном используется в запросах, использующих агрегатные   функции и операторы GROUP BY.
 
+## Задание 2.
+Создание веб-приложения "Hello World" на Flask.
+
+<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+
+Создание контейнера и публикация на DockerHub.
+
+<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+
+<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+
+Написание Deployment с 2 ReplicaSet.
+
+<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+
+Написание Service.
+
+<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+
+Запуск minikube, проброс портов, подключение к контейнерам через веб-браузер.
+
+<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+
+Схема организации контейнеров и сервисов (draw.io)
+
+<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
