@@ -6,7 +6,6 @@ RUN pip install flask
 COPY . /app
 WORKDIR /app
 
-
 EXPOSE 32774
 
 CMD ["python", "app.py"]
