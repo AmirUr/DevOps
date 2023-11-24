@@ -47,26 +47,26 @@
 ## Задание 2.
 Создание веб-приложения "Hello World" на Flask.
 
-<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+<img src="images/flaskfirst.jpg" alt="flaskfirst.jpg" width="400">
 
 Создание контейнера и публикация на DockerHub.
 
-<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+<img src="images/dockerPush.jpg" alt="dockerPush.jpg" width="400">
 
-<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+<img src="images/dockerHub.jpg" alt="dockerHub.jpg" width="400">
 
 Написание Deployment с 2 ReplicaSet.
 
-<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+<img src="images/deployments.jpg" alt="deployments.jpg" width="400">
 
 Написание Service.
 
-<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+<img src="images/service.jpg" alt="service.jpg" width="400">
 
 Запуск minikube, проброс портов, подключение к контейнерам через веб-браузер.
 
-<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+<img src="images/browserminikube.jpg" alt="browserminikube.jpg" width="400">
 
 Схема организации контейнеров и сервисов (draw.io)
 
-<img src="images/cassandrayml.jpg" alt="cassandrayml.jpg" width="400">
+<img src="images/drawio.jpg" alt="drawio.jpg" width="400">
