@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "mail": "123",
+      "pass": "123",
+      "birth": "2023-11-16"
+    },
+    {
+      "mail": "savva@novabiom.ru",
+      "pass": "1",
+      "birth": "2023-11-09",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
