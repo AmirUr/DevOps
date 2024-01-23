@@ -1,0 +1,33 @@
+FROM nginx:latest
+
+
+# ОБновляем файлы и устанавливаем пакеты
+RUN apt-get update
+RUN apt-get install -y nginx
+RUN apt-get install -y curl
+
+# Рабочая директория
+WORKDIR /usr/share/nginx/html
+
+# Копируем файлы в контейнер
+COPY Files/dist/ /usr/share/nginx/html/dist/
+COPY Files/images/ /usr/share/nginx/html/images/
+COPY Files/scripts/ /usr/share/nginx/html/scripts/
+COPY Files/index.html /usr/share/nginx/html/
+COPY Files/loading.css /usr/share/nginx/html/
+COPY Files/main.js /usr/share/nginx/html/
+COPY Files/style.css /usr/share/nginx/html/
+
+# JSON
+COPY Files/package.json /usr/share/nginx/html/
+COPY Files/package-lock.json /usr/share/nginx/html/
+
+# Nginx конфиг
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Порт
+EXPOSE 443
+
+# Запуск
+CMD ["nginx", "-g", "daemon off;"]
+
