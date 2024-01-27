@@ -33,7 +33,7 @@
 `kubectl apply -f service.yml` - Применение конфигурации service.
 
 
-Проверка работоспособности Pods.
+Проверка работоспособности.
 
 `kubectl get pods` - Список и состояние Pods.
 
