@@ -54,7 +54,7 @@
 
 <img width="1112" alt="prod" src="https://github.com/AmirUr/DevOps/assets/113135168/8f402b22-d2ce-43b1-a475-581197d485b4">
 
-## Grafana + Prometheus
+## Мониторинг. (Grafana + Prometheus)
 
 Установим Prometheus следующими командами.
 
