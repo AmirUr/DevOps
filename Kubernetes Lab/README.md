@@ -61,13 +61,17 @@
 <img width="811" alt="image" src="https://github.com/AmirUr/DevOps/assets/113135168/12b919c8-ad67-4c14-aaa8-40b175642b65">
 
 `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`
+
 `helm install prometheus prometheus-community/prometheus`
+
 `kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-np`
 
 Установим Grafana и получим инструкцию получения пароля к admin.
 
 `helm repo add grafana https://grafana.github.io/helm-charts`
+
 `helm install grafana grafana/grafana`
+
 `kubectl expose service grafana --type=NodePort --target-port=3000 --name=grafana-np`
 
 <img width="788" alt="image" src="https://github.com/AmirUr/DevOps/assets/113135168/fe78b2e7-c1f3-4a94-b07f-0ad4155534b9">
