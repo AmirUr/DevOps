@@ -58,9 +58,40 @@
 
 Установим Prometheus следующими командами.
 
-`helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm install prometheus prometheus-community/prometheus
-kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-np`
+<img width="811" alt="image" src="https://github.com/AmirUr/DevOps/assets/113135168/12b919c8-ad67-4c14-aaa8-40b175642b65">
 
+`helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`
+`helm install prometheus prometheus-community/prometheus`
+`kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-np`
+
+Установим Grafana и получим инструкцию получения пароля к admin.
+
+`helm repo add grafana https://grafana.github.io/helm-charts`
+`helm install grafana grafana/grafana`
+`kubectl expose service grafana --type=NodePort --target-port=3000 --name=grafana-np`
+
+<img width="788" alt="image" src="https://github.com/AmirUr/DevOps/assets/113135168/fe78b2e7-c1f3-4a94-b07f-0ad4155534b9">
+
+
+Проверим pods и services
+
+<img width="508" alt="image" src="https://github.com/AmirUr/DevOps/assets/113135168/b1023604-56d7-4a31-9bf1-bf6417380578">
+
+
+<img width="473" alt="image" src="https://github.com/AmirUr/DevOps/assets/113135168/c1693d2a-bd99-407e-92eb-b56bd1acb42a">
+
+Узнаем URL адреса Prometheus и Grafana. Используем инструкцию, которая была в заметках при установке Grafana. Получим пароль к admin.
+
+<img width="770" alt="image" src="https://github.com/AmirUr/DevOps/assets/113135168/4ebf8485-b8a9-4076-91fc-bb72c8bea311">
+
+Далее укажем источник метрик - Prometheus в Data Sources и законнектим Prometheus URL Server к Grafana.
+
+<img width="1100" alt="image" src="https://github.com/AmirUr/DevOps/assets/113135168/5988e6c4-2e17-4774-bafc-406adfdfc6b9">
+
+Перейдем во вкладку dashboard и можно увидеть множество различных шаблонов, выбрал Node Exporter, самый популярный, который собирает метрики системы. 
+
+<img width="1240" alt="image" src="https://github.com/AmirUr/DevOps/assets/113135168/7fe7b1e2-4518-4923-a282-8aec310e76dc">
+
+Все работает :)
 
 
