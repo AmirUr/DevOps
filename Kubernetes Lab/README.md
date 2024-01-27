@@ -1,4 +1,4 @@
-# Лабораторная работа (Kubernetes).
+# Лабораторная работа (Kubernetes + Grafana + Prometheus).
 
 
 
