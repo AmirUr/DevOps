@@ -11,7 +11,7 @@
 Далее. Сделать мониторинг сервиса, поднятого в кубере (использовать, например, prometheus и grafana). Показать хотя бы два рабочих графика, которые будут отражать состояние системы.
 
 
-## Выполнение работы.
+## Kubernetes
 
 
 
@@ -53,5 +53,14 @@
 Перейдем в браузер на наш IP minikube, укажем наши IP:Port
 
 <img width="1112" alt="prod" src="https://github.com/AmirUr/DevOps/assets/113135168/8f402b22-d2ce-43b1-a475-581197d485b4">
+
+## Grafana + Prometheus
+
+Установим Prometheus следующими командами.
+
+`helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm install prometheus prometheus-community/prometheus
+kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-np`
+
 
 
